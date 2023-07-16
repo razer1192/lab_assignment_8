@@ -6,16 +6,26 @@ int extraMemoryAllocated;
 
 // implements heap sort
 // extraMemoryAllocated counts bytes of memory allocated
+//MY CODE BELOW
 void heapSort(int arr[], int n)
 {
+
 }
 
 
 // implement merge sort
 // extraMemoryAllocated counts bytes of extra memory allocated
+//MY CODE BELOW
 void mergeSort(int pData[], int l, int r)
-{
+{	
+	int m = (r+l)/2;
+	int i, j, k;
+	
+
+
 }
+
+
 
 // parses input file to an integer array
 int parseData(char *inputFileName, int **ppData)
@@ -94,7 +104,7 @@ int main(void)
 		heapSort(pDataCopy, dataSz);
 		end = clock();
 		cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-		printf("\truntime\t\t\t: %.1lf\n",cpu_time_used);
+		printf("\truntime\t\t\t: %.3lf\n",cpu_time_used);
 		printf("\textra memory allocated\t: %d\n",extraMemoryAllocated);
 		printArray(pDataCopy, dataSz);
 		
@@ -105,7 +115,7 @@ int main(void)
 		mergeSort(pDataCopy, 0, dataSz - 1);
 		end = clock();
 		cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
-		printf("\truntime\t\t\t: %.1lf\n",cpu_time_used);
+		printf("\truntime\t\t\t: %.3lf\n",cpu_time_used);
 		printf("\textra memory allocated\t: %d\n",extraMemoryAllocated);
 		printArray(pDataCopy, dataSz);
 		
